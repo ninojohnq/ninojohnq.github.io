@@ -4,34 +4,113 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <title>Simple Landing Page</title>
+  <title>Wedding Invitation</title>
+  <style>
+    .jumbotron {
+      background-image: url('background-image.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+    }
+
+    .jumbotron h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    .jumbotron p {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .jumbotron .date {
+      font-size: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .jumbotron .location {
+      font-size: 2rem;
+    }
+
+    .rsvp-form {
+      padding: 50px 0;
+      background-color: #f8f9fa;
+      text-align: center;
+    }
+
+    .gallery {
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .gallery img {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
 
-  <header class="bg-dark text-white text-center py-5">
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple landing page built with Bootstrap</p>
-  </header>
+  <div class="jumbotron">
+    <h1>John and Jane's Wedding</h1>
+    <p>Together with their families, John and Jane request the honor of your presence at their wedding celebration.</p>
+    <p class="date">Saturday, June 25, 2023</p>
+    <p class="location">Central Park, New York City</p>
+    <p>Please join us for a ceremony and reception to follow.</p>
+    <p>Formal attire requested.</p>
+  </div>
 
-  <section class="container mt-5">
-    <div class="row">
-      <div class="col-md-6">
-        <h2>About Us</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada, urna sed sollicitudin lobortis, velit massa pretium lectus, et ullamcorper felis turpis et ipsum.</p>
-      </div>
-      <div class="col-md-6">
-        <h2>Contact</h2>
-        <p>If you have any questions, please feel free to reach out to us.</p>
-        <ul>
-          <li>Email: info@example.com</li>
-          <li>Phone: 123-456-7890</li>
-        </ul>
+  <section class="rsvp-form">
+    <div class="container">
+      <h2>RSVP</h2>
+      <p>Please RSVP by June 15th, 2023</p>
+      <form>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="guests">Number of guests:</label>
+          <input type="number" class="form-control" id="guests" min="1" max="5" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea class="form-control" id="message" rows="3" placeholder="Enter a message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="gallery-image-1.jpg" alt="Image 1">
+        </div>
+        <div class="col-md-4">
+          <img src="gallery-image-2.jpg" alt="Image 2">
+        </div>
+        <div class="col-md-4">
+          <img src="gallery-image-3.jpg" alt="Image 3">
+        </div>
       </div>
     </div>
   </section>
 
-  <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2023 My Website. All rights reserved.</p>
+  <footer class="text-center py-3">
+    <p>&copy; 2023 John and Jane's Wedding. All rights reserved.</p>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
